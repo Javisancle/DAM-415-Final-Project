@@ -41,7 +41,7 @@ warehouse_returns_query = "SELECT * FROM customerwarehousereturns"
 returns = pd.read_sql_query(warehouse_returns_query, conn)
 
 # Import another dataframe needed for the project from a local source
-churn = pd.read_csv(r'C:\Users\javis\Downloads\opc_cus_churn_2022.csv')
+churn = pd.read_csv('opc_cus_churn_2022.csv')
 
 
 # # DATA PROCESSING & EDA
