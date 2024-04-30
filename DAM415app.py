@@ -22,7 +22,7 @@ customers = pd.read_excel('opcCustomers.xlsx')
 
 orders = pd.read_excel('opcOrders.xlsx')
 
-warehouse = pd.read_excel('opcReturns.xlsx')
+returns = pd.read_excel('opcReturns.xlsx')
 
 # Import another dataframe needed for the project from a local source
 churn = pd.read_csv('opc_cus_churn_2022.csv')
