@@ -30,15 +30,11 @@ conn = psycopg2.connect(
     password='postgresJavi',
     host='localhost'
 )
+customers = pd.read_excel('opcCustomers.xlsx')
 
-customer_query = "SELECT * FROM customers"
-customers = pd.read_sql_query(customer_query, conn)
+orders = pd.read_excel('opcOrders.xlsx')
 
-orders_query = "SELECT * FROM orders"
-orders = pd.read_sql_query(orders_query, conn)
-
-warehouse_returns_query = "SELECT * FROM customerwarehousereturns"
-returns = pd.read_sql_query(warehouse_returns_query, conn)
+warehouse = pd.read_excel('opcReturns.xlsx')
 
 # Import another dataframe needed for the project from a local source
 churn = pd.read_csv('opc_cus_churn_2022.csv')
