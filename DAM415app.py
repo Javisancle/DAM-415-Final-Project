@@ -9,7 +9,6 @@
 # In[114]:
 
 
-import psycopg2
 from datetime import *
 import pandas as pd
 import numpy as np
@@ -19,17 +18,6 @@ import datetime
 from scipy import stats
 import streamlit as st
 
-# In[115]:
-
-
-#Query the data needed for the project from PostgreSQL database
-
-conn = psycopg2.connect(
-    dbname='opc',
-    user='postgres',
-    password='postgresJavi',
-    host='localhost'
-)
 customers = pd.read_excel('opcCustomers.xlsx')
 
 orders = pd.read_excel('opcOrders.xlsx')
